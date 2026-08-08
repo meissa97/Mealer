@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Mealer</h1>
+    <section id="meal-builder" class="container">
+        <h2>Meal Builder</h2>
+
+        <!-- Food Selector Form -->
+        <div class="selector-box">
+            <div class="input-group">
+                <div class="food-sel">
+                <label for="food-select">Select Food Item:</label>
+                <select id="food-select">
+                    <option value="" disabled selected>-- Choose a food item --</option>
+                </select>
+                </div>
+
+            </div>
+
+            <!-- Dynamic weight input -->
+            <div id="weight-input-container" class="input-group hidden">
+                <label for="portion-weight">Weight (g):</label>
+                <input type="number" id="portion-weight" min="0" step="1">
+                <button type="button" id="add-food-btn">Add to Meal</button>
+            </div>
+        </div>
+
+        <!-- Selected Items List -->
+        <div class="meal-list-section">
+            <h3>Current Meal Items</h3>
+            <ul id="selected-foods-list"></ul>
+        </div>
+
+        <!-- Meal Summary / Outcome -->
+        <div id="meal-summary" class="summary-box">
+            <h3>Total Meal Nutrition</h3>
+            <div class="macro-grid">
+                <div class="macro-item">
+                    <span class="label">Calories:</span>
+                    <span id="total-calories">0</span> <small>kcal</small>
+                </div>
+                <div class="macro-item">
+                    <span class="label">Protein:</span>
+                    <span id="total-protein">0</span> <small>g</small>
+                </div>
+                <div class="macro-item">
+                    <span class="label">Carbs:</span>
+                    <span id="total-carbs">0</span> <small>g</small>
+                </div>
+                <div class="macro-item">
+                    <span class="label">Fat:</span>
+                    <span id="total-fat">0</span> <small>g</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="foods.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
