@@ -115,3 +115,66 @@ li {
 .macro-item .label {
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 16px;
+        border-radius: 6px;
+    }
+
+    .selector-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    select, 
+    input[type="number"], 
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px; /* Prevents auto-zoom on iOS inputs */
+    }
+
+    button {
+        padding: 12px;
+        margin-top: 6px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    li > div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .edit-weight-input {
+        width: 55px;
+    }
+
+    .macro-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .macro-item {
+        font-size: 14px;
+    }
+}
